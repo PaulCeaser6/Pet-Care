@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+   .card {
+     background-color: theme('colors.white');
+     border-radius: theme('borderRadius.lg');
+     padding: theme('spacing.6');
+     box-shadow: theme('boxShadow.xl');
+   }
+
+}
+
+html {
+   scroll-behavior: smooth;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   /* color: #68917f; */
+}
+body {
+   background-image: url('../imgs/blob.svg');
+   background-repeat: no-repeat;
+   background-size: 600px;
+   background-position: 90% - 25%;
+}
+#wrapper {
+   max-width: 1000px;
+   margin: auto;
+   font-family: 'Lato', sans-serif;
+}
+h1, h2 , h3 {
+   font-family: 'Poppins', sans-serif; 
+}
+#sidebar {
+   height: 100%;
+   width: 0;
+   z-index: 1;
+   position: absolute;
+   top: 0;
+   right: 0;
+   background: #212529;
+   opacity: 0.9;
+   overflow-x: hidden;
+   padding-top: 5rem;
+   transition: .5s;
+}
+#sidebar a {
+   display: block;
+   padding: .5rem 1rem;
+   transition: .3s;
+   color: white;
+}
+#sidebar a:hover {
+   color: #68917f;
+}
+footer .end {
+   background-image: url('../imgs/circle.svg');
+   background-repeat: no-repeat;
+}
+
+@media (max-width: 576px) {
+   body {
+      background-position: 50px - 50px;
+      background-size: 500px;
+   }
+   footer .end {
+      background-image: url('../imgs/circle.svg');
+   }
+}
